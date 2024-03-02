@@ -3,7 +3,11 @@ from classroom.asignatura import Asignatura
 class Grupo:
     grado = None
 
-    def __init__(self, grupo="grupo predeterminado", asignaturas=[], estudiantes=[]):
+    def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=None):
+        if asignaturas ==None:
+            asignaturas=[]
+        if estudiantes ==None:
+            estudiantes=[]
         self._grupo = grupo
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes

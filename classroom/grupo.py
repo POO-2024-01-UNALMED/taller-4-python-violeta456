@@ -6,11 +6,15 @@ class Grupo:
     def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=None):
         if asignaturas ==None:
             asignaturas=[]
+            self._asignaturas=asignaturas
+        else:
+            self._asignaturas = asignaturas
         if estudiantes ==None:
             estudiantes=[]
+            self.listadoAlumnos=estudiantes
+        else:
+            self.listadoAlumnos = estudiantes
         self._grupo = grupo
-        self._asignaturas = asignaturas
-        self.listadoAlumnos = estudiantes
         self.grado="Grado 12"
 
     def listadoAsignaturas(self, **kwargs):
